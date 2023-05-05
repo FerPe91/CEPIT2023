@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav>
+        <div>
+            <img src="./img/logo.png" alt="logo">
+        </div>
+        <div>
+            <h1>MUSIC-BOOK</h1>
+        </div>
+
+    </nav>
+    
+    
+    <div class="container">
+        
+        <div class="bloqueIzquierdo">
+            
+            
+            <form action="">
+                <label>Autor:</label>
+                <input id="autor" type="text">
+        
+                <label>Tittle:</label>
+                <input id="tittle" type="text">
+        
+                <label>Content:</label>
+                <input id="content" type="text">
+        
+                <label>Year:</label>
+                <input id="year" type="text">
+                
+                <button type="button" id="btnAdd">ADD</button>
+            </form>
+            <div>
+                <button id="btnTopOne">TOP 1</button>
+                <button id="btnOldYear"> > 1 YEAR</button>
+    
+                <label>Search Content:</label>
+                <input type="text" id=searchContent">
+    
+                <button id="btn" id="newer">Newer</button>
+                <button id="btn" id="older">Older</button>
+    
+                <button id="btn">Trending Topics</button>
+            </div>
+    
+            <div id="info">
+            </div>
+
+        </div>
+
+        <div class="bloqueDerecho">
+            <div>
+                <div>
+                    <div  id="documentsMax">
+        
+        
+                    </div>
+                    <div >
+                        <ul id="olderOneYear">
+        
+                        </ul>
+                    </div>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    
+    
+
+<script src="register.js"></script>
+</body>
+</html>

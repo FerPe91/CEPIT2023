@@ -1,0 +1,174 @@
+body{
+    background-image: url(https://img.freepik.com/vector-gratis/paisaje-juego-plantas-tropicales_105738-749.jpg?w=2000);
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+audio{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.info .Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+img{
+    height: 300px;
+    width: 300px;
+}
+
+h1{
+    color: beige;
+    text-shadow: black 5px 6px 10px;
+}
+nav{
+    width:100%;
+    height: fit-content;
+}
+.logo{
+    height: 170px;
+    width:450px;
+    z-index: 9999;
+}
+
+.container{
+    font-family: 'Acme', sans-serif;
+    font-family: 'Alkatra', cursive;
+    margin-top: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+
+}
+.card-container{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition:ease-in-out 0.5s;
+    
+}
+
+.card-container:hover   {
+    transform: scale(1.2);
+    display: block;
+    z-index: 9999;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin:0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(150s / var(--i));
+    
+}
+
+.bubbles span:nth-child(even)
+{
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;
+    transition: ease-out 1.2s;
+}
+
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(90vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1)
+    }
+}
+
+
+
+.buttonVer {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50; /* Green */
+    width: 100px;
+    height: 70px;
+    border-radius: 15px;
+}
+.buttonVer {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.buttonVer:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+.buttonBorrar {
+    background-color: rgb(251, 119, 119);
+    color: black;
+    border: 2px solid #4CAF50; /* Green */
+    width: 100px;
+    height: 70px;
+    border-radius: 15px;
+}
+.buttonBorrar {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.buttonBorrar:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+input{
+    height: 70px;
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 15px;
+}

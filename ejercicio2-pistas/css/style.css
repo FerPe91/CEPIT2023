@@ -1,0 +1,77 @@
+*{
+    font-family: 'Acme', sans-serif;
+    font-family: 'Alkatra', cursive;
+}
+body{
+    background: #fffbd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b20a2c, #fffbd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b20a2c, #fffbd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+
+}
+h1 {
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+.container{
+    display: flex;
+}
+
+.bloqueDerecho{
+    width: 50%;
+}
+
+.bloqueIzquierdo{
+    width: 50%;
+}
+
+
+
+form{
+    display: flex;
+    padding: 10px;
+    border: solid 3px white;
+    border-radius: 15px;
+    width: fit-content;
+}
+
+
+.parrafos{
+    background-color: brown;
+}
+
+
+.documentsMax{
+    width: 350px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    border: 5px solid white;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.documentsMax p{
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.documentsMax h2{
+    font-size: 20px;
+}
+
+
