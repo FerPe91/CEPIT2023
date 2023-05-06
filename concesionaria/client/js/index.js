@@ -30,6 +30,7 @@ const mostrarVehiculos = () => {
                 <td>${r.precio}</td>
                 <td>${r.camioneta=r.camioneta ? "si" : "no"}</td>
                 <td>${r.carga}</td>
+                <td> <a href='http://localhost:3000/concesionariaDetail.html?index=${r.id}' class="btnVerDetalles"> 🔎 </a> </td>
                 <td><button type="button" class="btnEliminar" id=${r.id}>Eliminar</button></td>
             </tr>`
 
