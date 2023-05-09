@@ -1,25 +1,18 @@
 let btnAgregar = document.getElementById("btnAgregar")
 let verCamionetas = document.getElementById("verCamionetas")
 
+
 let vehiculos = [
-    id="2",
-    marca="ford",
-    patente="dfg-234",
-    modelo="falcon",
-    año="2012",
-    precio="1213",
-    camioneta=false,
-    carga=""
-
+    
 ];
-
-
+load()
 const mostrarVehiculos = () => {
     let contenedor = document.getElementById('tblVehiculo');
-    let tabla ='';
-
+    let tabla ='';    
+    
     for (let r of vehiculos) {
         console.log("dato:"+ r)
+
         tabla +=
             `<tr>
                 <td>${r.id}</td> 
@@ -28,12 +21,11 @@ const mostrarVehiculos = () => {
                 <td>${r.modelo}</td>
                 <td>${r.año}</td>
                 <td>${r.precio}</td>
-                <td>${r.camioneta=r.camioneta ? "si" : "no"}</td>
+                <td>${r.camioneta}</td>
                 <td>${r.carga}</td>
-                <td> <a href='http://localhost:3000/concesionariaDetail.html?index=${r.id}' class="btnVerDetalles"> 🔎 </a> </td>
+                <td> <a href='/concesionariaDetail.html?index=${r.id}' class="btnVerDetalles"> 🔎 </a> </td>
                 <td><button type="button" class="btnEliminar" id=${r.id}>Eliminar</button></td>
             </tr>`
-
             console.log(vehiculos);
     }
     contenedor.innerHTML = tabla;
@@ -45,9 +37,10 @@ const mostrarVehiculos = () => {
     miCheckbox.addEventListener("change", function() {
         if (miCheckbox.checked) {
             carga.disabled = false;
+
         } else {
             carga.disabled = true; 
-            r.carga=""
+            r.carga='-'
         }
     });
 
@@ -83,6 +76,10 @@ async function load(){
     mostrarVehiculos()
 }
 
+
+
+
+
 const agregar = async () => {
     let marca = document.getElementById('marca').value;
     let patente = document.getElementById('patente').value;
@@ -92,15 +89,20 @@ const agregar = async () => {
     let camioneta = document.getElementById('miCheckbox').value;
     let carga = document.getElementById('carga').value;
 
+
     let vehiculo = {
     "marca": marca,
     "patente": patente,
     "modelo": modelo,
     "año": año,
     "precio": precio,
-    "camioneta":camioneta,
+    "camioneta":camioneta ? "SI": "NO",
     "carga":carga,
     }
+
+    console.log(vehiculo);
+
+
     if (aServidor(vehiculo)) {
         vehiculos.push(vehiculo);
         mostrarVehiculos();
@@ -122,4 +124,4 @@ const aServidor = async (datos) => {
 
 
 btnAgregar.addEventListener('click', agregar)
-load()
+

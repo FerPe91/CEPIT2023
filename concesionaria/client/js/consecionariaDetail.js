@@ -19,7 +19,7 @@ const processParam = () => {
 const getVehiculoDetail = async () => {
     try {
         processParam();
-        const response = await fetch(`http://localhost:3000/concesionaria/${params["index"]}`);
+        const response = await fetch(`http://localhost:3000/concesionaria/${params["index"]}`)
 
         if (!response.ok) {
             throw new Error("Network response was not ok");
@@ -33,7 +33,6 @@ const getVehiculoDetail = async () => {
             document.querySelector('#precio').innerHTML += vehiculo['precio'];
             document.querySelector('#camioneta').innerHTML += vehiculo['camioneta'];
             document.querySelector('#carga').innerHTML += vehiculo['carga'];
-            
         }
     } catch (error) {
         console.error(error);

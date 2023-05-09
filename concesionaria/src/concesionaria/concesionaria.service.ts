@@ -1,6 +1,7 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { Vehiculo } from './Concesionaria.entity';
 import { v4 } from 'uuid';
+import { timeout } from 'rxjs';
 
 @Injectable()
 export class ConcesionariaService {
@@ -19,7 +20,21 @@ export class ConcesionariaService {
         return this.concesionaria
     }
 
+
+    getVehiculoById(id: string): Vehiculo {
+        const vehiculo = this.concesionaria.find((vehiculo) => vehiculo.id === id);
+        if (!vehiculo) {
+          // devolver una exception
+          throw new NotFoundException();
+        }
+        return vehiculo;
+    }
+
+
+
+
     createVehiculo(marca: string, patente:string, modelo:string,año:string, precio:string, camioneta:boolean, carga:string){
+        
         const vehiculo={
             id:v4(),
             marca,

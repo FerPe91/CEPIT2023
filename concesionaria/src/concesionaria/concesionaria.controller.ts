@@ -1,15 +1,23 @@
-import { Body, Controller, Get, Post, Delete, Param } from '@nestjs/common';
+import { Body, Controller, Get, Post, Delete, Param, ParseUUIDPipe } from '@nestjs/common';
 import { ConcesionariaService } from './concesionaria.service';
 import { CreateVehiculoDTO } from './dto/Vehiculo.dto';
+import { Vehiculo } from './Concesionaria.entity';
 
 @Controller('concesionaria')
-
 export class ConcesionariaController {
 
     constructor(private concesionariaService: ConcesionariaService){}
     @Get()
     getVehiculos(){
         return this.concesionariaService.getAllVehiculos()
+    }
+
+
+    @Get(":id") // url/pistas/:id >> /pistas/a354c326-fc53-4079-9568-9de965eecb7a
+    getVehiculoById(
+    @Param("id", ParseUUIDPipe)
+    id: string,): Vehiculo {
+    return this.concesionariaService.getVehiculoById(id);
     }
 
      
